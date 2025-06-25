@@ -36,7 +36,7 @@ export default function ParivarSaathiLanding() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:5000/api/consult/send-consult', formData);
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/consult/send-consult`, formData);
       if (response.status === 201) {
         toast.success("Form submitted successfully! We will contact you soon.");
         setFormData({ name: "", phone: "", help: "" });
