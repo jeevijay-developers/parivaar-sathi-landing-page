@@ -3,9 +3,10 @@
 import type React from "react"
 
 import { useState } from "react"
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Heart,
@@ -313,13 +314,13 @@ export default function ParivarSaathiLanding() {
       </section>
 
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <Button
+      <div className="fixed bottom-6 right-6 z-50 ">
+        <div
           onClick={handleWhatsApp}
-          className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-lg"
+          className="bg-green-500 hover:bg-green-600 text-white rounded-full size-14 shadow-lg flex justify-center items-center"
         >
-          <MessageCircle className="w-6 h-6" />
-        </Button>
+          <FaWhatsapp size={30}  />
+        </div>
       </div>
 
       {/* Sticky Mobile Footer */}

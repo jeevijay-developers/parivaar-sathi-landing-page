@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Heart, Phone, MessageCircle } from "lucide-react"
 import Image from "next/image"
+import { FaWhatsapp } from "react-icons/fa"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -91,7 +92,7 @@ export default function Navbar() {
               size="sm"
               className="bg-gradient-to-r from-green-600 to-green-500 text-white hover:from-green-500 hover:to-green-600 transition-all duration-300 hover:shadow-lg hover:shadow-green-600/20 px-3"
             >
-              <MessageCircle className="w-4 h-4 mr-2" />
+              <FaWhatsapp size={12} />
               <span className="font-medium">WhatsApp</span>
             </Button>
           </div>
