@@ -1,8 +1,9 @@
 "use client"
 
 import type React from "react"
-
-import { useState } from "react"
+import { ToastContainer } from 'react-toastify';
+import { useState } from "react";
+import axios from 'axios';
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -23,6 +24,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import Navbar from "@/components/navbar/Navbar"
+import { toast } from "react-toastify";
 
 export default function ParivarSaathiLanding() {
   const [formData, setFormData] = useState({
@@ -31,9 +33,19 @@ export default function ParivarSaathiLanding() {
     help: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
+    try {
+      const response = await axios.post('http://localhost:5000/api/consult/send-consult', formData);
+      if (response.status === 201) {
+        toast.success("Form submitted successfully! We will contact you soon.");
+        setFormData({ name: "", phone: "", help: "" });
+      } else {
+        toast.error("Failed to submit form. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Error Submitting form:");
+    }
     console.log("Form submitted:", formData)
   }
 
@@ -49,7 +61,7 @@ export default function ParivarSaathiLanding() {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navbar />
-      
+
       {/* Hero Section */}
       <section id="hero" className="relative bg-gradient-to-br from-brand-lilac/20 to-brand-yellow/20 py-12 md:py-20 pt-20">
         <div className="container mx-auto px-4">
@@ -319,7 +331,7 @@ export default function ParivarSaathiLanding() {
           onClick={handleWhatsApp}
           className="bg-green-500 hover:bg-green-600 text-white rounded-full size-14 shadow-lg flex justify-center items-center"
         >
-          <FaWhatsapp size={30}  />
+          <FaWhatsapp size={30} />
         </div>
       </div>
 
@@ -342,6 +354,7 @@ export default function ParivarSaathiLanding() {
 
       {/* Add bottom padding for mobile to account for sticky footer */}
       <div className="h-14 md:hidden"></div>
+      <ToastContainer />
     </div>
   )
 }
