@@ -21,6 +21,7 @@ import {
   Headphones,
 } from "lucide-react"
 import Image from "next/image"
+import Navbar from "@/components/navbar/Navbar"
 
 export default function ParivarSaathiLanding() {
   const [formData, setFormData] = useState({
@@ -45,15 +46,18 @@ export default function ParivarSaathiLanding() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <Navbar />
+      
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-lilac/20 to-brand-yellow/20 py-12 md:py-20">
+      <section id="hero" className="relative bg-gradient-to-br from-brand-lilac/20 to-brand-yellow/20 py-12 md:py-20 pt-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left Content */}
             <div className="space-y-6">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/couple.png"
                   alt="Happy Indian couple embracing with hope"
                   width={600}
                   height={400}
@@ -116,7 +120,7 @@ export default function ParivarSaathiLanding() {
       </section>
 
       {/* Why Choose Parivar Saathi */}
-      <section className="py-16 bg-white">
+      <section id="why-choose" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose Parivar Saathi</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -180,7 +184,7 @@ export default function ParivarSaathiLanding() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      <section id="testimonials" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">What Our Families Say</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -215,7 +219,7 @@ export default function ParivarSaathiLanding() {
       </section>
 
       {/* Our Services */}
-      <section className="py-16 bg-brand-lilac/10">
+      <section id="services" className="py-16 bg-brand-lilac/10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -260,7 +264,7 @@ export default function ParivarSaathiLanding() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-brand-purple to-brand-orange text-white">
+      <section id="contact" className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Start your journey with confidence.</h2>
@@ -296,7 +300,7 @@ export default function ParivarSaathiLanding() {
               <Button
                 onClick={handleCall}
                 variant="outline"
-                className="bg-white text-brand-purple border-white hover:bg-gray-100 px-8 py-3 h-auto"
+                className="bg-white text-brand-purple border-gray-500 hover:bg-gray-100 px-8 py-3 h-auto"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Request a Callback
