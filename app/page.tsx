@@ -111,9 +111,9 @@ export default function ParivarSaathiLanding() {
                     <SelectValue placeholder="What do you need help with?" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ivf">IVF Treatment</SelectItem>
-                    <SelectItem value="second-opinion">Second Opinion</SelectItem>
-                    <SelectItem value="information">Information Only</SelectItem>
+                    <SelectItem value="IVF Treatment">IVF Treatment</SelectItem>
+                    <SelectItem value="Second Opinion">Second Opinion</SelectItem>
+                    <SelectItem value="Information Only">Information Only</SelectItem>
                   </SelectContent>
                 </Select>
                 <Button
@@ -295,9 +295,9 @@ export default function ParivarSaathiLanding() {
                     <SelectValue placeholder="What do you need help with?" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="ivf">IVF Treatment</SelectItem>
-                    <SelectItem value="second-opinion">Second Opinion</SelectItem>
-                    <SelectItem value="information">Information Only</SelectItem>
+                    <SelectItem value="IVF Treatment">IVF Treatment</SelectItem>
+                    <SelectItem value="Second Opinion">Second Opinion</SelectItem>
+                    <SelectItem value="Information Only">Information Only</SelectItem>
                   </SelectContent>
                 </Select>
                 <Button
