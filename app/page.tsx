@@ -302,9 +302,10 @@ export default function ParivarSaathiLanding() {
                 </Select>
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold"
+                  className={`w-full h-12 ${loading ? "opacity-50 cursor-not-allowed" : ""} bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold`}
+                  disabled={loading}
                 >
-                  {loading? "Sending Enquiry..." :"Get Free Consultation"}
+                  {loading ? "Sending Enquiry...": "Get Free Consultation"}
                 </Button>
               </form>
             </div>
