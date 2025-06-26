@@ -335,23 +335,6 @@ export default function ParivarSaathiLanding() {
         </div>
       </div>
 
-      {/* Sticky Mobile Footer */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg md:hidden z-40">
-        <div className="flex">
-          <Button onClick={handleCall} variant="ghost" className="flex-1 h-14 rounded-none">
-            <Phone className="w-5 h-5 mr-2" />
-            Call Us
-          </Button>
-          <Button
-            onClick={handleWhatsApp}
-            className="flex-1 h-14 rounded-none bg-green-600 hover:bg-green-700 text-white"
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
-            Chat on WhatsApp
-          </Button>
-        </div>
-      </div>
-
       {/* Add bottom padding for mobile to account for sticky footer */}
       <div className="h-14 md:hidden"></div>
       <ToastContainer />

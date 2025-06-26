@@ -120,7 +120,7 @@ export default function Navbar() {
             isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="px-4 py-3 space-y-2">
+          {isMenuOpen&& (<div className="px-4 py-3 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -130,12 +130,12 @@ export default function Navbar() {
                 {item.label}
               </button>
             ))}
-            <div className="pt-4 w-full space-y-3 pb-2">
+            <div className="pt-4 w-full  pb-2">
               <Button
                 onClick={handleCall}
                 variant="outline"
-                className="w-full border-2 border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white transition-all duration-300 font-medium"
-                style={{width: "6rem"}}
+                className="w-full border-2 mb-3 border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white transition-all duration-300 font-medium"
+                style={{ marginBottom: "1rem" }}
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Call Us
@@ -148,7 +148,7 @@ export default function Navbar() {
                 Chat on WhatsApp
               </Button>
             </div>
-          </div>
+          </div>)}
         </div>
       </div>
     </nav>
