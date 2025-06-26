@@ -31,22 +31,25 @@ export default function ParivarSaathiLanding() {
     name: "",
     phone: "",
     help: "",
-  })
+  });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setLoading(true);
     try {
       const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/consult/send-consult`, formData);
       if (response.status === 201) {
         toast.success("Form submitted successfully! We will contact you soon.");
         setFormData({ name: "", phone: "", help: "" });
+        setLoading(false);
       } else {
         toast.error("Failed to submit form. Please try again.");
       }
     } catch (error) {
       toast.error("Error Submitting form:");
     }
-    console.log("Form submitted:", formData)
+    console.log("Form submitted:", formData);
   }
 
   const handleWhatsApp = () => {
@@ -115,9 +118,10 @@ export default function ParivarSaathiLanding() {
                 </Select>
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold"
+                  className={`w-full h-12 ${loading ? "opacity-50 cursor-not-allowed" : ""} bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold`}
+                  disabled={loading}
                 >
-                  Get Free Consultation
+                  {loading ? "Sending Enquiry...": "Get Free Consultation"}
                 </Button>
               </form>
 
@@ -300,7 +304,7 @@ export default function ParivarSaathiLanding() {
                   type="submit"
                   className="w-full h-12 bg-brand-purple hover:bg-brand-purple/90 text-white font-semibold"
                 >
-                  Get Free Consultation
+                  {loading? "Sending Enquiry..." :"Get Free Consultation"}
                 </Button>
               </form>
             </div>
