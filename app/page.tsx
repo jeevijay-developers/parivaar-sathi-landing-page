@@ -53,11 +53,11 @@ export default function ParivarSaathiLanding() {
   }
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919876543210", "_blank")
+    window.open("https://wa.me/919230965019", "_blank")
   }
 
   const handleCall = () => {
-    window.open("tel:+919876543210", "_self")
+    window.open("tel:+919230965019", "_self")
   }
 
   return (
