@@ -74,7 +74,7 @@ export default function ParivarSaathiLanding() {
             <div className="space-y-6">
               <div className="relative">
                 <Image
-                  src="/couple.png"
+                  src="/sections/1.jpg"
                   alt="Pixar-style illustration of a couple with a counselor"
                   width={600}
                   height={400}
@@ -145,25 +145,25 @@ export default function ParivarSaathiLanding() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="flex items-center">
-              <div className="w-12 h-12 p-3 bg-orange-100 rounded-full flex items-center justify-center mr-3">
-                <Headphones className="w-6 h-6 text-orange-500" />
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                <Image src="/sections/3.png" alt="Free Fertility Counseling" width={50} height={50} className="rounded-full" />
               </div>
               <p className="font-semibold text-gray-800">Free Fertility Counseling</p>
             </div>
             <div className="flex items-center">
-              <div className="w-10 h-10 p-3 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                <UserCheck className="w-6 h-6 text-blue-500" />
+              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                <Image src="/sections/5.png" alt="Empaneled with Trusted IVF Clinics" width={50} height={50} className="rounded-full" />
               </div>
               <p className="font-semibold text-gray-800">Empaneled with Trusted IVF Clinics</p>
             </div>
             <div className="flex items-center">
-              <div className="w-12 h-12 p-3 bg-green-100 rounded-full flex items-center justify-center mr-3">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
                 <Shield className="w-6 h-6 text-green-500" />
               </div>
               <p className="font-semibold text-gray-800">Transparent, Affordable Treatment</p>
             </div>
             <div className="flex items-center">
-              <div className="w-12 h-12 p-3 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
                 <Users className="w-6 h-6 text-yellow-600" />
               </div>
               <p className="font-semibold text-gray-800">1000+ Couples Guided Across India</p>
